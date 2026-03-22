@@ -53,19 +53,19 @@ const HeroSection: React.FC = () => {
               with Bidezy
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Manage RFQs, run auctions, and connect hospitals with trusted vendors – 
+              Manage RFQs, run auctions, and connect hospitals with trusted vendors –
               all in one secure, easy-to-use platform.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
+              <button onClick={() => window.location.href = '/buyer'} className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
                 Hospital Login
               </button>
-              <button className="px-8 py-4 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
+              <button onClick={() => window.location.href = '/vendor'} className="px-8 py-4 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all duration-200 transform hover:scale-105 shadow-lg">
                 Vendor Login
               </button>
-              <button className="px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all duration-200">
+              <button onClick={() => window.location.href = '/demo'} className="px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all duration-200">
                 Request a Demo
               </button>
             </div>
@@ -77,9 +77,8 @@ const HeroSection: React.FC = () => {
               {slides.map((slide, index) => (
                 <div
                   key={index}
-                  className={`absolute inset-0 bg-gradient-to-br ${slide.bgColor} transition-all duration-500 transform ${
-                    index === currentSlide ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full'
-                  }`}
+                  className={`absolute inset-0 bg-gradient-to-br ${slide.bgColor} transition-all duration-500 transform ${index === currentSlide ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-full'
+                    }`}
                 >
                   <div className="h-full flex flex-col items-center justify-center p-8 text-center">
                     <div className="mb-6 transform transition-all duration-300 hover:scale-110">
@@ -116,9 +115,8 @@ const HeroSection: React.FC = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                    index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
-                  }`}
+                  className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'
+                    }`}
                 />
               ))}
             </div>

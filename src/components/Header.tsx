@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, Users, Phone } from 'lucide-react';
+import { Building2, Phone } from 'lucide-react';
 
 const Header: React.FC = () => {
   return (
@@ -33,10 +33,16 @@ const Header: React.FC = () => {
               <Phone className="w-4 h-4" />
               <span>Request Demo</span>
             </button>
-            <button className="px-4 py-2 text-sm font-medium text-emerald-600 bg-emerald-50 rounded-lg hover:bg-emerald-100 transition-colors">
+            <button
+              onClick={() => window.location.href = '/vendor'}
+              className="px-4 py-2 text-sm font-medium text-emerald-600 bg-emerald-50 rounded-lg hover:bg-emerald-100 transition-colors"
+            >
               Vendor Login
             </button>
-            <button className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors">
+            <button
+              onClick={() => window.location.href = '/buyer'}
+              className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors"
+            >
               Hospital Login
             </button>
           </div>

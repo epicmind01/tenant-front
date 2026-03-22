@@ -32,12 +32,12 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a onClick={() => window.location.href = '/buyer'} className="text-gray-400 hover:text-white transition-colors">
                   Hospital Login
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a onClick={() => window.location.href = '/vendor'} className="text-gray-400 hover:text-white transition-colors">
                   Vendor Login
                 </a>
               </li>

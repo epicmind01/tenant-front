@@ -13,11 +13,11 @@ const CallToAction: React.FC = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto">
-          <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2">
+          <button onClick={() => window.location.href = '/buyer'} className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2">
             <span>Hospital Login</span>
             <ArrowRight className="w-5 h-5" />
           </button>
-          <button className="px-8 py-4 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2">
+          <button onClick={() => window.location.href = '/vendor'} className="px-8 py-4 bg-emerald-600 text-white font-semibold rounded-lg hover:bg-emerald-700 transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2">
             <span>Vendor Login</span>
             <ArrowRight className="w-5 h-5" />
           </button>
